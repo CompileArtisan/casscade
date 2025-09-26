@@ -3,3 +3,5 @@ pyppeteer
 python-dotenv
 pymongo
 dnspython
+flask
+flask-cors
