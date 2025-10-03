@@ -1,0 +1,57 @@
+* About Casscade 
+ - A CSS Battle by CSI-VIT! 
+ - Use CSS/HTML to replicate a given image.
+ - https://github.com/csivitu/CASsCADE
+
+* How to get this working
+
+** Setup Backend
+#+begin_src bash
+cd backend
+python -m venv venv
+
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+pip install -r requirements.txt
+#+end_src
+
+** Environment Configuration
+- Create a free cluster at [[https://www.mongodb.com/cloud/atlas][Atlas Database | MongoDB]]
+- Go to "Quickstart" on the left sidebar and create a user. Note down the
+  credentials.
+- For testing, go to "Network Access" on the left sidebar and click on "Add IP
+  Address". Click on "Allow Access From Anywhere".
+- Go to "Clusters" on the left sidebar, and click on "Connect":
+  - Click on "Drivers" and select "Python" from the dropdown.
+  - Copy the Connection String that looks like:
+    #+begin_src txt
+mongodb+srv://<db_username>:<db_password>@cluster0.mhppvae.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    #+end_src
+  - Replace ~<db_username>~ and ~<db_password>~ with the credentials you noted down
+    earlier.
+  - Go back to the repository and create file ~/backend/.env~ with contents:
+    #+begin_src txt
+MONGO_URL=mongodb+srv://casscade_admin:YOUR_PASSWORD@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+DB=casscade
+COLLECTION=submissions
+    #+end_src
+- Go to "Clusters" on the left sidebar, and click on the "Collections" tab.
+  - Create a new database with database name ~casscade~ and collection name
+    ~submissions~.
+
+** Start Backend
+#+begin_src bash
+# In backend directory (with venv activated)
+python api_server.py
+#+end_src
+
+** Frontend Setup
+#+begin_src bash
+cd frontend
+npm install
+npm start
+#+end_src
+
