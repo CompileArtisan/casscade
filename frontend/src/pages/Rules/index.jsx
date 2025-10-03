@@ -25,7 +25,7 @@ const Rules = () => {
               </ol>
             <p style={{ paddingTop: '1.5rem'}}>
             Better the match and lesser the number of lines of code, higher the score. <br />
-            Platform: -- Discord <br /> </p>
+            <br /> </p>
             </p>
           </li>
           <br />
@@ -36,29 +36,15 @@ const Rules = () => {
             </p>
             <br />
             <p style={{ paddingLeft: '2.5rem' }}>
-            The people who passed the previous round will participate in this round. The participants will be divided 
+            The people who passed the previous round will participate in this UI/UX round. The participants will be divided 
             into groups and each group will compete amongst themselves. The objective of this round will be to replicate 
             the target image using HTML/CSS.  The round participants will be judged on time taken, efficiency of code, and 
-            recreation accuracy. The duration of this round will be 30 minutes as well, with 15 minutes to make submissions. <br />
+            recreation accuracy. The duration of this round will be 60 minutes as well, with 15 minutes to make submissions. <br />
             <p style={{ paddingTop: '1.5rem'}}>
             Platform: -- Discord <br /> </p>
             </p>
           </li>
           <br />
-          <li>
-            <img src={listIcon} className="inline-block" /> &nbsp;
-            <p className="inline" style={{ color: '#F1BD12' }}>
-              ROUND 3:
-            </p>
-            <br />
-            <p style={{ paddingLeft: '2.5rem' , paddingBottom: ''}}>
-            The final round will require the participants to replicate an entire website using HTML/CSS. The duration 
-            for this round will be 24 hours, by the end of which the participants should have a static website prepared which 
-            includes their own designs. Theme will be revealed after round 2. <br />
-            <p style={{ paddingTop: '1.5rem'}}>
-            Platform: -- Discord <br /> </p>
-            </p>
-          </li>
         </ul>
       </p>
       <img src={background} className="casscade-bg-rules"/>
